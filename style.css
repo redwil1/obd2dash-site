@@ -1,0 +1,19 @@
+:root { --bg: #ffffff; --ink: #16181c; --muted: #5b616b; --line: #e3e5e8; --accent: #0f8a62; --card: #f5f6f7; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0b0c0e; --ink: #f4f5f7; --muted: #a9aeb6; --line: #2c3037; --accent: #3ee6a8; --card: #15171b; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+.muted { color: var(--muted); }
+ul { padding-left: 22px; }
+a { color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 24px; font-size: 15px; }
+.cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+.card h3 { margin: 0 0 4px; font-size: 17px; }
+.price { font-size: 22px; font-weight: 700; margin: 4px 0 8px; }
+.card ul { margin: 0; padding-left: 18px; font-size: 15px; }
+table { border-collapse: collapse; width: 100%; }
+td { border-top: 1px solid var(--line); padding: 8px 8px 8px 0; vertical-align: top; }
+td:first-child { color: var(--muted); width: 38%; }
