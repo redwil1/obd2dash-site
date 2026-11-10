@@ -1,13 +1,14 @@
-/* Same palette as the app: dark first, gold for PRO, green for what's free. */
+/* Same palette as the app: dark first, brand yellow (icon, main button, PRO), green for what's free. */
 :root {
   --bg: #0b0c0e; --surface: #15171b; --surface-2: #1c1f24; --ink: #f4f5f7; --muted: #a9aeb6; --dim: #7c828c;
-  --line: #2a2e35; --ok: #3ee6a8; --ok-soft: rgba(62, 230, 168, .12); --pro: #e8b65a; --pro-soft: rgba(232, 182, 90, .12);
+  --line: #2a2e35; --ok: #3ee6a8; --ok-soft: rgba(62, 230, 168, .12); --pro: #ffc72c; --pro-soft: rgba(255, 199, 44, .12);
+  --brand: #ffc72c; --brand-ink: #15120a;
   --radius: 18px;
 }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     --bg: #f6f7f9; --surface: #ffffff; --surface-2: #f0f2f5; --ink: #15171b; --muted: #4f5560; --dim: #737a85;
-    --line: #e2e5ea; --ok: #0d8a5f; --ok-soft: rgba(13, 138, 95, .10); --pro: #a86f0c; --pro-soft: rgba(201, 140, 30, .12);
+    --line: #e2e5ea; --ok: #0d8a5f; --ok-soft: rgba(13, 138, 95, .10); --pro: #8a6200; --pro-soft: rgba(255, 199, 44, .18);
   }
 }
 * { box-sizing: border-box; }
@@ -32,10 +33,11 @@ nav .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); f
 nav .brand img { width: 32px; height: 32px; border-radius: 9px; }
 
 /* hero */
-.hero .icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 10px 40px rgba(232, 182, 90, .18); }
+.hero .icon { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 10px 40px rgba(255, 199, 44, .25); }
 .lead { font-size: clamp(17px, 2.6vw, 20px); color: var(--muted); max-width: 640px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 24px; border-radius: 14px; font-weight: 700; text-decoration: none; font-size: 16px; }
-.btn-ok { background: var(--ok); color: #08130e; }
+.btn-ok { background: var(--brand); color: var(--brand-ink); }
+.btn-ok:hover { filter: brightness(1.06); }
 .btn-ghost { border: 1px solid var(--line); color: var(--ink); }
 .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
